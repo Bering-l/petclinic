@@ -1,0 +1,20 @@
+package com.petclinic.spring.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Procedure {
+
+    @Id
+    @Column(name = "procedure_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long procedureId;
+
+    @Column(name = "name_procedures")
+    private String nameProcedures;
+
+}
