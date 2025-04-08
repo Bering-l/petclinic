@@ -1,20 +1,12 @@
 package com.petclinic.spring.service;
 
+import com.petclinic.spring.dto.RequestBreedDTO;
 import com.petclinic.spring.entity.Breed;
-import com.petclinic.spring.repository.BreedRepository;
-import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Service;
 
-@Service
-public class BreedService {
-    public BreedService(BreedRepository breedRepository) {
-        this.breedRepository = breedRepository;
-    }
 
-    private final BreedRepository breedRepository;
+import java.util.Optional;
 
-    @Transactional
-    public void saveNewBreed(Breed breed) {
-        breedRepository.save(breed);
-    }
+public interface BreedService {
+    Optional<RequestBreedDTO> getBreedName(Long id);
+    void addBreed(Breed breed);
 }

@@ -1,20 +1,13 @@
 package com.petclinic.spring.service;
 
-import com.petclinic.spring.dto.RequestOwnerDTO;
-import com.petclinic.spring.entity.Owner;
-import com.petclinic.spring.dto.mapper.OwnerMapper;
-import com.petclinic.spring.repository.OwnerRepository;
-import jakarta.persistence.EntityExistsException;
-import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class OwnerService {
-    private final OwnerRepository ownerRepository;
-    private final OwnerMapper ownerMapper;
+  //  private final OwnerRepository ownerRepository;
+  //  private final OwnerMapper ownerMapper;
 
-    @Autowired
+/*    @Autowired
     public OwnerService(OwnerRepository ownerRepository, OwnerMapper ownerMapper) {
         this.ownerRepository = ownerRepository;
         this.ownerMapper = ownerMapper;
@@ -37,5 +30,5 @@ public class OwnerService {
         Owner entity = ownerMapper.toEntity(dto);
         Owner savedEntity = ownerRepository.save(entity);
         return ownerMapper.toDto(savedEntity);
-    }
+    }*/
 }
