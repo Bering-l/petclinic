@@ -22,8 +22,8 @@ public class AnimalType {
 
     @Id
     @Column(name = "animal_type_id")
-    @JsonProperty("animalTypeId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("animalTypeId")
     private Long animalTypeId;
 
     @Enumerated(EnumType.STRING)

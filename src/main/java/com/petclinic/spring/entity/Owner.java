@@ -2,6 +2,7 @@ package com.petclinic.spring.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,13 +25,13 @@ public class Owner {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ownerId;
 
-    @Column(name = "owner_name", nullable = false)
+    @Column(name = "owner_name")
     private String ownerName;
 
-    @Column(nullable = false)
+    @Column
     private String surname;
 
-    @Column(nullable = false)
+    @Column
     private String telephone;
 
     @ManyToOne(fetch = FetchType.LAZY)

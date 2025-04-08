@@ -1,6 +1,7 @@
 package com.petclinic.spring.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,7 @@ public class Breed {
     private Long breedId;
 
     @Column(name = "breed_name", nullable = false)
+    @JsonProperty("breedName")
     private String breedName;
 
     @JsonIgnore

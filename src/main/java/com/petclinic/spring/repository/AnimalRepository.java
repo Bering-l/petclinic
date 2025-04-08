@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface AnimalRepository extends JpaRepository<Animal, Long> {
 
-    @EntityGraph(attributePaths = {"breed", "owner", "animalType"})
-    List<Animal> findAll();
+  /*  @EntityGraph(attributePaths = {"breed", "owner", "animalType"})
+    List<Animal> findAll();*/
+
 }
