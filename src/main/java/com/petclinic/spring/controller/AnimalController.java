@@ -23,7 +23,7 @@ public class AnimalController {
 
     @GetMapping("/animals")
     public List<Animal> getAllAnimals() {
-        logger.info("999999999999999999");
+        logger.info("Получение всех животных");
         return animalService.getAllAnimals();
     }
 
@@ -31,4 +31,5 @@ public class AnimalController {
     public void createAnimal(@RequestBody Animal animal) {
         animalService.saveNewAnimal(animal);
     }
+    //http://localhost:8080/swagger-ui.html
 }
