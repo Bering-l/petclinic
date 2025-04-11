@@ -9,5 +9,7 @@ import java.util.Optional;
 @Repository
 public interface BreedRepository extends JpaRepository<Breed, Long> {
     Breed findByBreedName(String breedName);
+
     Optional<Breed> findByBreedId(Long id);
+
 }

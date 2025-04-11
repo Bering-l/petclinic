@@ -6,5 +6,5 @@ import lombok.Data;
 public class RequestBreedDTO {
 
     String breedName;
-
+    String colorName;
 }

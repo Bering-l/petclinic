@@ -8,5 +8,6 @@ import org.mapstruct.Mapper;
 public interface BreedMapping {
     RequestBreedDTO toDto(Breed breed);
 
-    Breed toEntity(Breed breed);
+    Breed toEntity(RequestBreedDTO breed);
+
 }

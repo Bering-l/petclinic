@@ -27,6 +27,14 @@ public class Breed {
     @JsonProperty("breedName")
     private String breedName;
 
+    @ManyToMany
+    @JoinTable(
+            name = "breed_colors",
+            joinColumns = @JoinColumn(name = "breed_id"),
+            inverseJoinColumns = @JoinColumn(name = "color_id")
+    )
+    private List<Color> colors;
+
     @JsonIgnore
     @OneToMany(mappedBy = "breed")
     private List<Animal> animals;
