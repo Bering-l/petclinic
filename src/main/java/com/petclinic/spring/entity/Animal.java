@@ -48,7 +48,7 @@ public class Animal {
     private LocalDate dateOfBirth;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "owner_id", nullable = false)
     @JsonIgnore
     @JsonProperty("owner")
     private Owner owner;
