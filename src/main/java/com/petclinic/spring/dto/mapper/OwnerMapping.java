@@ -7,4 +7,5 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring", uses = {AnimalMapping.class, AddressMapping.class, })
 public interface OwnerMapping {
     RequestOwnerDTO toDto(Owner owner);
+    Owner toEntity(RequestOwnerDTO ownerDTO);
 }
