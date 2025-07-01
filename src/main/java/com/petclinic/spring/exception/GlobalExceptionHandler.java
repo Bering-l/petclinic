@@ -1,5 +1,6 @@
 package com.petclinic.spring.exception;
 
+import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,5 +19,12 @@ public class GlobalExceptionHandler {
         Map<String, Object> response = new HashMap<>();
         response.put("error", e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+    }
+
+    @ExceptionHandler(EntityExistsException.class)
+    public ResponseEntity<Map<String, Object>> handleEntityExistsException(EntityExistsException e) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("error", "Entity already exists: " + e.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
     }
 }

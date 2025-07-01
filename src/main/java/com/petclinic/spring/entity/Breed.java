@@ -47,4 +47,7 @@ public class Breed {
                 '}';
     }
 
+    public Breed(Long breedId) {
+        this.breedId = breedId;
+    }
 }
