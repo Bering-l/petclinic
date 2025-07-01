@@ -39,5 +39,9 @@ public class Address {
 
     @Column(name = "flat")
     private Integer flat;
+
+    public Address(Long addressId) {
+        this.addressId = addressId;
+    }
 }
 

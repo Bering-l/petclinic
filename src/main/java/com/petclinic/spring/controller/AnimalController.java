@@ -31,5 +31,9 @@ public class AnimalController {
     public void createAnimal(@RequestBody Animal animal) {
         animalService.saveNewAnimal(animal);
     }
-    //http://localhost:8080/swagger-ui.html
+
+    @DeleteMapping("/animals")
+    public void deleteAnimalById(@RequestParam("id") Long id) {
+        animalService.deleteAnimalId(id);
+    }
 }

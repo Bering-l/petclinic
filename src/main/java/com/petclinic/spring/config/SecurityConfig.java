@@ -1,5 +1,6 @@
 package com.petclinic.spring.config;
 
+/*
 import com.petclinic.spring.security.ApiKeySecurityFilter;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,11 +11,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+*/
 
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-    @Value("${security.api.key.header}")
+//@Configuration
+//@EnableWebSecurity
+public class   SecurityConfig {
+/*    @Value("${security.api.key.header}")
     private String apiKeyHeader;
 
     @Value("${security.api.key.value}")
@@ -32,5 +34,5 @@ public class SecurityConfig {
                         .anyRequest().permitAll())
                 .addFilterBefore(apiKeySecurityFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
-    }
+    }*/
 }

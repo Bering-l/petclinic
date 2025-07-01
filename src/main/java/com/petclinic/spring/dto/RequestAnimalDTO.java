@@ -1,7 +1,6 @@
 package com.petclinic.spring.dto;
 
 import com.petclinic.spring.entity.AnimalType;
-import com.petclinic.spring.entity.Owner;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 

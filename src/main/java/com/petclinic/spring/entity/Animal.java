@@ -83,5 +83,9 @@ public class Animal {
 
     public Animal() {
     }
+
+    public Animal(Long animalId) {
+        this.animalId = animalId;
+    }
 }
 
